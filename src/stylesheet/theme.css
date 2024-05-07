@@ -1,0 +1,17 @@
+:root {
+    /* --primary: #0F3460; */
+    --primary: #BF3131;
+    --secondary: #ff5722;
+    --success: #6fbf71;
+    --info: #00bcd4;
+    --warning: #e47943;
+    --danger: #f44336;
+    --light: #f1f1f1;
+    --dark: #212121;
+}
+.bg-primary{
+    background-color: var(--primary) !important;
+}
+.text-white{
+    color: aliceblue !important;
+}

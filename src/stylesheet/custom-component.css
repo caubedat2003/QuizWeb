@@ -1,0 +1,39 @@
+.card {
+    box-shadow: 0 0 1px gray;
+}
+
+.divider {
+    border-top: 1px solid gray;
+}
+
+.loader-parent {
+    position: absolute;
+    inset: 0;
+    background-color: #000000ab;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 16px solid silver;
+    border-top: 16px solid darkred;
+    border-radius: 500%;
+    width: 80px;
+    height: 80px;
+    animation: loader 1200ms linear infinite;
+    top: 40%;
+    left: 55%;
+    position: absolute;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

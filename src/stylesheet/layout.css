@@ -1,0 +1,40 @@
+.layout{
+    padding: 15px;
+    height: 100vh;
+    /* width: 100vw; */
+}
+.sidebar{
+    background-color: var(--primary);
+    padding: 10px;
+    border-radius: 5px;
+    color: aliceblue;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-item{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin : 5px;
+    cursor: pointer;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.active-menu-item{
+    border: 2px solid aliceblue;
+    border-radius: 5px;
+}
+.body{
+    width: 100%;
+}
+.header{
+    background-color: var(--primary);
+    color: aliceblue;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center;
+}
