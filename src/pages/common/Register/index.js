@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { registerUser } from "../../../apicalls/users";
 import { Form, message } from "antd";
 import { useDispatch } from "react-redux";
@@ -7,6 +7,7 @@ import { HideLoading, ShowLoading } from "../../../redux/loaderSlice";
 
 function Register() {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const onFinish = async (values) => {
         try {
             dispatch(ShowLoading());
@@ -14,6 +15,7 @@ function Register() {
             dispatch(HideLoading());
             if (response.success) {
                 message.success(response.message);
+                navigate('/login');
             }
             else {
                 message.error(response.message);
@@ -28,7 +30,10 @@ function Register() {
         <div className="flex justify-center item-center h-screen w-screen">
             <div className="card w-400 p-3">
                 <div className="flex flex-col">
-                    <h1 className="text-2xl">Register</h1>
+                    <div className="flex gap-2 justify-center align-center">
+                        <i class="ri-user-add-line mt-1-5"></i>
+                        <h1 className="text-2xl">Register</h1>
+                    </div>
                     <div className="divider" />
                     <Form layout="vertical" className="mt-2" onFinish={onFinish} initialValues={{}}>
                         <Form.Item name="name" label="Name: ">

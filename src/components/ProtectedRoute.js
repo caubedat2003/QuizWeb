@@ -17,15 +17,15 @@ function ProtectedRoute({ children }) {
     const userMenu = [
         {
             title: "Trang chủ",
-            paths: ["/"],
+            paths: ["/", "/user/write-exam"],
             icon: <i className="ri-home-4-line"></i>,
             onClick: () => navigate("/")
         },
         {
             title: "Kết quả",
-            paths: ["/reports"],
+            paths: ["/user/reports"],
             icon: <i className="ri-file-chart-line"></i>,
-            onClick: () => navigate("/reports")
+            onClick: () => navigate("/user/reports")
         },
         {
             title: "Hồ sơ",
@@ -47,7 +47,7 @@ function ProtectedRoute({ children }) {
     const adminMenu = [
         {
             title: "Trang chủ",
-            paths: ["/"],
+            paths: ["/", "/user/write-exam"],
             icon: <i className="ri-home-4-line"></i>,
             onClick: () => navigate("/")
         },
@@ -59,9 +59,9 @@ function ProtectedRoute({ children }) {
         },
         {
             title: "Kết quả",
-            paths: ["/reports"],
+            paths: ["/admin/reports"],
             icon: <i className="ri-file-chart-line"></i>,
-            onClick: () => navigate("admin//reports")
+            onClick: () => navigate("/admin/reports")
         },
         {
             title: "Hồ sơ",
@@ -99,13 +99,19 @@ function ProtectedRoute({ children }) {
                 message.error(response.message);
             }
         } catch (error) {
+            navigate("/login");
             dispatch(HideLoading());
             message.error(error.message);
         }
     }
 
     useEffect(() => {
-        getUserData();
+        if (localStorage.getItem("token")) {
+            getUserData();
+        }
+        else {
+            navigate("/login");
+        }
     }, []);
 
     const activeRoute = window.location.pathname;
@@ -113,6 +119,14 @@ function ProtectedRoute({ children }) {
     const getIsActiveOrNot = (path) => {
         if (path.includes(activeRoute)) {
             return true;
+        }
+        else {
+            if (activeRoute.includes("/admin/exams/edit") && path.includes("/admin/exams")) {
+                return true;
+            }
+            if (activeRoute.includes("/user/write-exam") && path.includes("/user/write-exam")) {
+                return true;
+            }
         }
         return false;
     }

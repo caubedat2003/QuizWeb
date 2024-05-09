@@ -12,10 +12,17 @@ select {
     margin-bottom: 5px !important;
 }
 
+button {
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
 .primary-contanied-btn {
     background-color: var(--primary);
     color: white;
     padding: 10px 20px;
+    border: var(--primary);
+    font-size: large;
 }
 
 .primary-outlined-btn {
@@ -25,4 +32,27 @@ select {
     border-radius: 5px;
     padding: 10px 20px;
     font-size: large;
+}
+
+.primary-contanied-btn-nopbai {
+    background-color: var(--success);
+    color: white;
+    padding: 10px 20px;
+    border: var(--primary);
+    font-size: large;
+}
+
+.primary-outlined-btn-thembaithi {
+    background-color: white;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: large;
+    align-items: center;
+    margin: 16px;
+}
+
+.themcauhoi {
+    width: auto;
 }

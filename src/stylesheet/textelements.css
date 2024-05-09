@@ -49,3 +49,11 @@ i {
     text-align: center;
     justify-content: center;
 }
+
+.text-normal {
+    font-weight: normal;
+}
+
+.text-center {
+    text-align: center;
+}

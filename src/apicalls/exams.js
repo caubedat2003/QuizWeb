@@ -37,3 +37,44 @@ export const editExamById = async (payload) => {
         return error.response.data;
     }
 }
+
+//delete exam by id
+export const deleteExamById = async (payload) => {
+    try {
+        const response = await axiosInstance.post('/api/exams/delete-exam-by-id', payload);
+        return response.data;
+    } catch (error) {
+        return error.response.data;
+    }
+}
+
+//add question to exam
+export const addQuestionToExam = async (payload) => {
+    try {
+        const response = await axiosInstance.post('/api/exams/add-question-to-exam', payload);
+        console.log(payload);
+        return response.data;
+    } catch (error) {
+        return error.response.data;
+    }
+}
+
+//edit question by id
+export const editQuestionById = async (payload) => {
+    try {
+        const response = await axiosInstance.post('/api/exams/edit-question-in-exam', payload);
+        return response.data;
+    } catch (error) {
+        return error.response.data;
+    }
+}
+
+//delete question by id
+export const deleteQuestionById = async (payload) => {
+    try {
+        const response = await axiosInstance.post('/api/exams/delete-question-in-exam', payload);
+        return response.data;
+    } catch (error) {
+        return error.response.data;
+    }
+}

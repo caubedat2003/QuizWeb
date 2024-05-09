@@ -31,7 +31,10 @@ function Login() {
         <div className="flex justify-center item-center h-screen w-screen">
             <div className="card w-400 p-3">
                 <div className="flex flex-col">
-                    <h1 className="text-2xl">Login</h1>
+                    <div className="flex gap-2 justify-center align-center">
+                        <i className="ri-login-box-line mt-1-5"></i>
+                        <h1 className="text-2xl">Login</h1>
+                    </div>
                     <div className="divider" />
                     <Form layout="vertical" className="mt-2" onFinish={onFinish}>
                         <Form.Item name="email" label="Email: ">
