@@ -33,7 +33,7 @@ function Login() {
                 <div className="flex flex-col">
                     <div className="flex gap-2 justify-center align-center">
                         <i className="ri-login-box-line mt-1-5"></i>
-                        <h1 className="text-2xl">Login</h1>
+                        <h1 className="text-2xl">Đăng nhập</h1>
                     </div>
                     <div className="divider" />
                     <Form layout="vertical" className="mt-2" onFinish={onFinish}>
@@ -41,13 +41,13 @@ function Login() {
                             <input type="text" placeholder="Username" />
                         </Form.Item>
 
-                        <Form.Item name="password" label="Password: ">
+                        <Form.Item name="password" label="Mật khẩu: ">
                             <input type="password" placeholder="Password" />
                         </Form.Item>
 
                         <div className="flex flex-col gap-2">
-                            <button type="submit" className="primary-contanied-btn mt-2 w-100">Login</button>
-                            <Link to="/register" className="text-center underline">Register</Link>
+                            <button type="submit" className="primary-contanied-btn mt-2 w-100">Đăng nhập</button>
+                            <Link to="/register" className="text-center underline">Đăng kí</Link>
                         </div>
                     </Form>
                 </div>

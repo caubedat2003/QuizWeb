@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { HideLoading, ShowLoading } from "../../../redux/loaderSlice";
 import { getAllReports } from "../../../apicalls/reports";
 import moment from "moment";
-import { get } from "mongoose";
+
 
 function AdminReports() {
     const [reportsData, setReportsData] = React.useState([]);
@@ -17,21 +17,21 @@ function AdminReports() {
 
     const colums = [
         {
-            title: "Ten bai thi",
+            title: "Tên bài thi",
             dataIndex: "examName",
             render: (text, record) => <>
                 {record.exam.name}
             </>
         },
         {
-            title: "Nguoi dung",
+            title: "Người dùng",
             dataIndex: "user",
             render: (text, record) => <>
                 {record.user.name}
             </>
         },
         {
-            title: "Thoi gian lam bai",
+            title: "Thời gian làm bài",
             dataIndex: "date",
             render: (text, record) => <>
                 {
@@ -40,28 +40,28 @@ function AdminReports() {
             </>
         },
         {
-            title: "Diem",
+            title: "Điểm",
             dataIndex: "correctAnswers",
             render: (text, record) => <>
                 {record.result.correctAnswers.length}
             </>
         },
         {
-            title: "So cau hoi",
+            title: "Số câu hỏi",
             dataIndex: "totalQuestion",
             render: (text, record) => <>
                 {record.exam.totalMarks}
             </>
         },
         {
-            title: "Diem qua mon",
+            title: "Điểm qua môn",
             dataIndex: "passingMarks",
             render: (text, record) => <>
                 {record.exam.passingMarks}
             </>
         },
         {
-            title: "Trang thai",
+            title: "Trạng thái",
             dataIndex: "vedict",
             render: (text, record) => <>
                 {record.result.vedict}
@@ -93,10 +93,10 @@ function AdminReports() {
             <PageTitle title="Kết quả" />
             <div className="divider"></div>
             <div className="flex gap-2 mt-2 ">
-                <input type="text" placeholder="Ten bai thi"
+                <input type="text" placeholder="Tên bài thi"
                     onChange={(e) => setFilter({ ...filter, examName: e.target.value })}
                 ></input>
-                <input type="text" placeholder="Nguoi dung"
+                <input type="text" placeholder="Người dùng"
                     onChange={(e) => setFilter({ ...filter, userName: e.target.value })}
                 ></input>
                 <button className="primary-outlined-btn"
@@ -110,10 +110,10 @@ function AdminReports() {
                             userName: ""
                         });
                     }}
-                >Lam moi</button>
+                >Làm mới</button>
                 <button className="primary-contanied-btn"
                     onClick={() => getData(filter)}
-                >Tim kiem</button>
+                >Tìm kiếm</button>
             </div>
             <Table columns={colums} dataSource={reportsData} className="mt-2"></Table>
         </div>

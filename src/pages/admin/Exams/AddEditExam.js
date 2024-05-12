@@ -71,7 +71,7 @@ function AddEditExam() {
             dataIndex: 'name',
         },
         {
-            title: "Options",
+            title: "Đáp án",
             dataIndex: "options",
             render: (text, record) => {
                 return Object.keys(record.options).map((key) => {
@@ -84,7 +84,7 @@ function AddEditExam() {
             },
         },
         {
-            title: "Correct Option",
+            title: "Đáp án đúng",
             dataIndex: "correctOption",
             render: (text, record) => {
                 console.log(record);

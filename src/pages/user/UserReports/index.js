@@ -12,14 +12,14 @@ function UserReports() {
 
     const colums = [
         {
-            title: "Ten bai thi",
+            title: "Tên bài thi",
             dataIndex: "examName",
             render: (text, record) => <>
                 {record.exam.name}
             </>
         },
         {
-            title: "Thoi gian lam bai",
+            title: "Thời gian làm bài",
             dataIndex: "date",
             render: (text, record) => <>
                 {
@@ -28,28 +28,28 @@ function UserReports() {
             </>
         },
         {
-            title: "Diem",
+            title: "Điểm",
             dataIndex: "correctAnswers",
             render: (text, record) => <>
                 {record.result.correctAnswers.length}
             </>
         },
         {
-            title: "So cau hoi",
+            title: "Số câu hỏi",
             dataIndex: "totalQuestion",
             render: (text, record) => <>
                 {record.exam.totalMarks}
             </>
         },
         {
-            title: "Diem qua mon",
+            title: "Điểm qua môn",
             dataIndex: "passingMarks",
             render: (text, record) => <>
                 {record.exam.passingMarks}
             </>
         },
         {
-            title: "Trang thai",
+            title: "Trạng thái",
             dataIndex: "vedict",
             render: (text, record) => <>
                 {record.result.vedict}

@@ -71,6 +71,14 @@
     border-radius: 50%;
 }
 
+.profile {
+    background-color: aliceblue;
+    box-shadow: slategray 0px 0px 5px;
+    padding: 20px;
+    color: black !important;
+    border-radius: 5px;
+}
+
 @keyframes loader {
     0% {
         transform: rotate(0deg);

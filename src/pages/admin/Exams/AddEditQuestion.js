@@ -53,7 +53,7 @@ function AddEditQuestion({
         }
     }
     return (
-        <Modal title={selectedQuestion ? "Chinh sua cau hoi" : "Them cau hoi"}
+        <Modal title={selectedQuestion ? "Chỉnh sửa câu hỏi" : "Thêm câu hỏi"}
             visible={showAddEditQuestionModal} footer={false}
             onCancel={() => {
                 setShowAddEditQuestionModal(false);

@@ -195,13 +195,13 @@ function WriteExam() {
                                         setSelectedOptions({});
                                         setSecondsLeft(examData.duration);
                                     }}
-                                >Lam lai</button>
+                                >Làm lại</button>
 
                                 <button className="primary-contanied-btn-nopbai"
                                     onClick={() => {
                                         setView("review");
                                     }}
-                                >Xem dap an</button>
+                                >Xem đáp án</button>
                             </div>
                         </div>
                     </div>
@@ -219,7 +219,7 @@ function WriteExam() {
                 </div>)}
 
             {view === "review" && (
-                <div className="flex flex-col gap-2 mt-2">
+                <div className="flex flex-col gap-2 mt-2 mb-2">
                     {questions.map((question, index) => {
                         const isCorrect = question.correctOption === selectedOptions[index];
                         return <div className={`
@@ -235,12 +235,12 @@ function WriteExam() {
                         </div>
                     })}
 
-                    <div className="flex justify-center gap-2">
+                    <div className="flex justify-center gap-2 ">
                         <button className="primary-outlined-btn"
                             onClick={() => {
                                 navigate("");
                             }}
-                        >Dong</button>
+                        >Đóng</button>
                         <button className="primary-contanied-btn"
                             onClick={() => {
                                 setView("instructions");
@@ -248,7 +248,7 @@ function WriteExam() {
                                 setSelectedOptions({});
                                 setSecondsLeft(examData.duration);
                             }}
-                        >Lam lai</button>
+                        >Làm lại</button>
                     </div>
                 </div>
             )}

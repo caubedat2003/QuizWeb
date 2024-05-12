@@ -10,9 +10,9 @@ export const addExam = async (payload) => {
     }
 }
 //get all exams
-export const getAllExams = async () => {
+export const getAllExams = async (filter) => {
     try {
-        const response = await axiosInstance.post('/api/exams/get-all-exams');
+        const response = await axiosInstance.post('/api/exams/get-all-exams', filter);
         return response.data;
     } catch (error) {
         return error.response.data;

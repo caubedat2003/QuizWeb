@@ -32,25 +32,25 @@ function Register() {
                 <div className="flex flex-col">
                     <div className="flex gap-2 justify-center align-center">
                         <i class="ri-user-add-line mt-1-5"></i>
-                        <h1 className="text-2xl">Register</h1>
+                        <h1 className="text-2xl">Đăng kí</h1>
                     </div>
                     <div className="divider" />
                     <Form layout="vertical" className="mt-2" onFinish={onFinish} initialValues={{}}>
-                        <Form.Item name="name" label="Name: ">
-                            <input type="text" placeholder="Username" />
+                        <Form.Item name="name" label="Tên: ">
+                            <input type="text" placeholder="Tên" />
                         </Form.Item>
 
                         <Form.Item name="email" label="Email: ">
-                            <input type="text" placeholder="Username" />
+                            <input type="text" placeholder="Email" />
                         </Form.Item>
 
-                        <Form.Item name="password" label="Password: ">
-                            <input type="password" placeholder="Password" />
+                        <Form.Item name="password" label="Mật khẩu: ">
+                            <input type="password" placeholder="Mật khẩu" />
                         </Form.Item>
 
                         <div className="flex flex-col gap-2">
-                            <button type="submit" className="primary-contanied-btn mt-2 w-100">Register</button>
-                            <Link to="/login" className="text-center underline">Login</Link>
+                            <button type="submit" className="primary-contanied-btn mt-2 w-100">Đăng kí</button>
+                            <Link to="/login" className="text-center underline">Đăng nhập</Link>
                         </div>
                     </Form>
                 </div>
